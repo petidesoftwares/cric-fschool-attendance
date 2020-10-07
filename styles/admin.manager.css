@@ -1,0 +1,118 @@
+#left-side-bar{
+    margin-top: -2%;
+    width: 28%;
+    height: 70%;
+    margin-left: 1px;
+    margin-right: 2px;
+    background-color: rgb(6, 77, 6);
+    color: whitesmoke;
+    position: fixed;
+}
+
+.avatar{
+    width: 38%;
+    margin: 2%;
+    position: absolute;
+    left: 3%;
+}
+
+#profile-data{
+    display: inline-block;
+    text-align: left;
+    margin-top: 10%;    
+    height: 23%;
+    width: 50%;
+    position: absolute;
+    left: 47%;
+}
+
+#dashboard{
+    width: 100%;
+    position: absolute;
+    top: 30%;
+    margin: 1%;
+    margin-left:5px;
+    text-align: left;
+}
+#dashboard h3{
+    margin-top: 2%;
+    margin-left: 0px;
+    text-align: center;
+}
+#dashboard span{
+    margin: 2%;
+    margin-left: 5%;
+    font-weight: bold;
+    cursor: pointer;
+}
+#dashboard span:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* #setup-btn-div{
+    position: absolute;
+    top: 45%;
+} */
+
+#setup-btn{
+    margin-top: 2%;
+    margin-left: 5%;
+    border:0px none;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: white;
+    color: green;
+    border-radius: 10px;
+}
+
+#footer{
+    width: 100%;
+    height: 14%;
+    background-color: black;
+    color: chartreuse;
+    position: fixed;
+    top: 92%;
+}
+
+#display-pane{
+    margin-top: -2%;
+    width: 68%;
+    height: 70%;
+    overflow: scroll;
+    position: fixed;
+    left: 29%;
+}
+#reg-form-div{
+    font-size: 20px;
+    text-align: left;
+    background-color: gray;
+}
+#t-reg-form-div{
+    padding-top: 5%;;
+}
+.form-field{
+    font-size: 20px;
+    margin: 1%;
+}
+
+#address-field{
+    width: 80%;
+}
+
+#student-list{
+border: solid 1px green;
+font-weight: bold;
+}
+#student-list tr{
+    cursor: pointer;
+}
+#bg-grey{
+    background-color:  rgb(6, 77, 6);
+    color: white;
+}
+#attendance-table th{
+    background-color:  rgb(6, 77, 6);
+    color: white;
+    font-size: 11px;
+}

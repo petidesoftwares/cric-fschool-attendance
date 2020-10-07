@@ -1,0 +1,62 @@
+#profile-pane{
+    margin-top: -2%;
+    width: 26%;
+    height: 70%;
+    margin-left: 1px;
+    margin-right: 2px;
+    background-color: rgb(6, 77, 6);
+    color: whitesmoke;
+    position: fixed;
+}
+
+.avatar{
+    width: 50%;
+    margin: 2%;
+    position: absolute;
+    left: 23%;
+}
+#profile-data{
+    width: 100%;
+    position: absolute;
+    top: 42%;
+    margin: 3%;
+    margin-left:10px;
+    text-align: left;
+}
+
+#logout{
+    width: 5%;
+    height: auto;
+    border: none;
+    background-color:rgb(6, 77, 6);
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    position: fixed;
+    left: 80%;
+
+}
+
+.form-field{
+    font-size: 20px;
+    margin: 1%;
+}
+
+#teacher-activities{
+    margin-top: 98%;;
+}
+
+#take-attendance{
+    font-weight: bold;
+    cursor: pointer;
+}
+#take-attendance:hover{
+    text-decoration: underline;
+}
+
+#display-pane{
+    width: 60%;
+    margin-left: 28%;
+    /* border: solid 2px green; */
+}
