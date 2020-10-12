@@ -1,0 +1,31 @@
+#att-btn{
+    display: inline;
+    border: solid 2px green;
+    width: 5%;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* table, th{
+border: solid 2px black;
+border-collapse: collapse;
+} */
+th{
+    font-size: 22px;
+}
+td{
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+}
+#submit_attendees{
+    font-size: 20px;
+    font-weight: bold;
+    border: solid 2px green;
+    border-radius: 5px;
+}
+#evenRow{
+    background-color: grey;
+    color: honeydew;
+}

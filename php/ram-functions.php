@@ -17,7 +17,7 @@ function getCourseList(){
     $conn = new DB_CONNECTION();
     $connection = $conn->createConnection();
      if($connection){
-         $getCourseQuery = mysqli_query($connection,"SELECT class FROM classes")or die(mysqli_error($connection));
+         $getCourseQuery = mysqli_query($connection,"SELECT class_id, class FROM classes")or die(mysqli_error($connection));
          if(mysqli_num_rows($getCourseQuery)>0){
              return $getCourseQuery;
                  
