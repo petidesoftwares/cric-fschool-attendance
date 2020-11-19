@@ -41,7 +41,7 @@ if(!isset($_SESSION["admin_id"])){
                 <span onclick = 'regTeacher();'>Register Teacher</span>
                 <span onclick = 'viewStudent();'>View Student</span>
                 <span onclick = 'viewAttendance();'>View Attendance</span>
-                <span>View Successful Attendee</span>
+                <span onclick = 'getSuccessfulAttendee();'>View Successful Attendee</span>
                 <span>Assign Project</span>
                 <span onclick ='uploadClasses();'>Upload Classes(Topics)</span>
                 <?php if($state !=1){

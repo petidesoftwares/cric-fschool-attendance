@@ -1,5 +1,6 @@
 <?php
     require_once('db_conn.php');
+    require_once('generate-reg-number.php');
     $conn = new DB_CONNECTION();
     $connection = $conn->createConnection();
      if($connection){
@@ -20,8 +21,11 @@
                 $fs_session = $_POST["session"];
                 $regDate =$_POST["regDate"];
 
+                $regNumber = generateRegNumber();
+
                 $insertStudent = mysqli_query($connection, "INSERT INTO fs_student(
                         title,
+                        reg_number,
                         surname, 
                         firstname,
                         mobile, 
@@ -32,6 +36,7 @@
                         bus_stop)
                         VALUES(
                             '".mysqli_real_escape_string($connection,$title)."',
+                            '".mysqli_real_escape_string($connection,$regNumber)."',
                             '".mysqli_real_escape_string($connection,$surname)."',
                             '".mysqli_real_escape_string($connection,$fname)."', 
                             '".mysqli_real_escape_string($connection,$phone)."', 
@@ -102,8 +107,11 @@
                 $amountPaid = $_POST['amountPaid'];
                 $balance = $_POST['balance'];
 
+                $regNumber = generateRegNumber();
+
                 $insertStudent = mysqli_query($connection, "INSERT INTO fs_student(
                         title,
+                        reg_number,
                         surname, 
                         firstname,
                         mobile, 
@@ -114,6 +122,7 @@
                         bus_stop)
                         VALUES(
                             '".mysqli_real_escape_string($connection,$title)."',
+                            '".mysqli_real_escape_string($connection,$regNumber)."',
                             '".mysqli_real_escape_string($connection,$surname)."',
                             '".mysqli_real_escape_string($connection,$fname)."', 
                             '".mysqli_real_escape_string($connection,$phone)."', 

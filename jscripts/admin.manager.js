@@ -126,3 +126,9 @@ function setupSystem(){
         }
     });
 }
+
+function getSuccessfulAttendee(){
+    $.post("../php/successful-attendees-view.php",function(data){
+        $('#display-pane').html(data);
+    })
+}

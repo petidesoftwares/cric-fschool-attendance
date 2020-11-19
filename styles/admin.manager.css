@@ -116,3 +116,20 @@ font-weight: bold;
     color: white;
     font-size: 11px;
 }
+
+#attendance-table td{
+    min-width: 100px;
+}
+
+#attendance-table #name{
+    min-width: 200px;
+}
+#attendance-table #teacher{
+    min-width: 200px;
+}
+
+#attendee_error{
+    font-size: 26px;
+    font-weight: bold;
+    color: red;
+}
