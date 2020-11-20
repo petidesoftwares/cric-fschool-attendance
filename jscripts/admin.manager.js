@@ -96,16 +96,14 @@ function classesFormUpload(){
     for(var i=1; i<=num_fields;i++){
         var clas = $("#class"+i+"").val();
         $.post("../php/proccess-class-upload.php",{clas:clas},function(data){
-           if(data!=="successful"){
-               respTracker+=1;
+           if(data=="successful"){
+               respTracker++;
+               if(respTracker==num_fields){
+                alert("Classes Successfully Uploaded");
+                $("input").val("");
+               }
            }
         });
-    }
-    if(respTracker==num_fields){
-        alert("Classes Successfully Uploaded");
-        for(var i=1; i<=num_fields;i++){
-            var clas = $("#class"+i+"").val("");
-        }
     }
 }
 

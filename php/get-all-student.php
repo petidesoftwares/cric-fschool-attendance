@@ -21,9 +21,9 @@ $studentList = getStudentList();
                         $s_n = 1;
                         foreach($studentList as $list){
                             if($s_n%2 ==0){
-                                echo '<tr id="bg-grey"><td>'.$s_n.'</td><td>None</td><td>'.$list['firstname'].'</td><td>'.$list['surname'].'</td><td>'.$list['othername'].'</td></tr>';
+                                echo '<tr id="bg-grey"><td>'.$s_n.'</td><td>'.$list['reg_number'].'</td><td>'.$list['firstname'].'</td><td>'.$list['surname'].'</td><td>'.$list['othername'].'</td></tr>';
                             }else{
-                                echo "<tr><td>".$s_n."</td><td>None</td><td>".$list['firstname']."</td><td>".$list['surname']."</td><td>".$list['othername']."</td></tr>";
+                                echo "<tr><td>".$s_n."</td><td>".$list['reg_number']."</td><td>".$list['firstname']."</td><td>".$list['surname']."</td><td>".$list['othername']."</td></tr>";
                             }
                             
                             $s_n++;

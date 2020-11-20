@@ -4,7 +4,7 @@ function getStudentList(){
     $conn = new DB_CONNECTION();
     $connection = $conn->createConnection();
      if($connection){
-         $getStudentsQuery = mysqli_query($connection,"SELECT firstname, surname, othername FROM fs_student, fs_student_othername WHERE fs_student.id=fs_student_othername.student_id")or die(mysqli_error($connection));
+         $getStudentsQuery = mysqli_query($connection,"SELECT reg_number, firstname, surname, othername FROM fs_student, fs_student_othername WHERE fs_student.id=fs_student_othername.student_id")or die(mysqli_error($connection));
          if(mysqli_num_rows($getStudentsQuery)>0){
              return $getStudentsQuery;
                  
@@ -21,6 +21,8 @@ function getCourseList(){
          if(mysqli_num_rows($getCourseQuery)>0){
              return $getCourseQuery;
                  
+         }else{
+             return null;
          }
      }
 }

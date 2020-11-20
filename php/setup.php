@@ -5,7 +5,7 @@
         $connection = $conn->createConnection();
     
         if($connection){
-            $setup = mysqli_query($connection, "UPDATE fschool_system_status SET system_status = 1");
+            $setup = mysqli_query($connection, "UPDATE fschool_system_status SET system_status = 1 WHERE system_status = 0");
             if($setup==true){
                 echo "Setup Successful";
             }

@@ -29,7 +29,7 @@
                         teacher_id
                     ) VALUES(
                         '".mysqli_real_escape_string($conn, $exp[1])."',
-                        '".mysqli_real_escape_string($conn, date('d'))."',
+                        '".mysqli_real_escape_string($conn, date('l'))."',
                         '".mysqli_real_escape_string($conn, $exp[0])."',
                         '".mysqli_real_escape_string($conn, date('Y-m-d'))."',
                         '".mysqli_real_escape_string($conn, $class_id)."',

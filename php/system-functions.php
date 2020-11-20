@@ -20,8 +20,12 @@
         $connection = $conn->createConnection();
         if($connection){ 
             $checkSystemStateQuery = mysqli_query($connection, "SELECT system_status FROM fschool_system_status");
-            $state = mysqli_fetch_assoc($checkSystemStateQuery);
-            return $state['system_status'];
+            if(mysqli_num_rows($checkSystemStateQuery)>0){
+                $state = mysqli_fetch_assoc($checkSystemStateQuery);
+                return $state['system_status'];
+            }else{
+                return 0;
+            }
         }
     }
 
