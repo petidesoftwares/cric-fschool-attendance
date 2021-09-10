@@ -14,6 +14,11 @@ abstract class Model {
     protected $primaryKey ="id";
     protected $table;
 
+    /**
+     * Finds and returns the resource matching the given $id
+     * @param $id
+     * @return mixed|string
+     */
     public function find($id){
         $connect = new Connection();
         $conn = $connect->createConnection();
@@ -23,6 +28,11 @@ abstract class Model {
 
     }
 
+    /**
+     * Creates a new record in the storage from the given @param $dataArray.
+     * @param $dataArray
+     * @return string|void|null
+     */
     public function create($dataArray){
         $processedData = "";
         if(is_array($dataArray)){
@@ -53,6 +63,10 @@ abstract class Model {
         return $resp;
     }
 
+    /**
+     * This gets the name of the model that extends this class.
+     * @return string
+     */
     public function getTable(){
         if($this->table === null){
             return strtolower(get_class($this))."s";
@@ -96,6 +110,10 @@ abstract class Model {
         return $this->getAttribute();
     }
 
+    /**
+     * It gets the default attribute or field value from storage
+     * @return mixed
+     */
     public function getDefaultAttributeValue(){
         $connect = new Connection();
         $conn = $connect->createConnection();

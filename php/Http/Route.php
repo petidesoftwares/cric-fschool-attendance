@@ -7,7 +7,6 @@ class Router{
     }
 
     public function get($route, $method){
-
         $this->{"get"}[$this->formatRoute($route)] = $method;
     }
     public function post($route, $method){
@@ -40,8 +39,11 @@ class Router{
             $this->defaultRequestHandler();
             return ;
         }
-        $controllerClass = new $methodName[0]();
-        echo call_user_func_array(array($controllerClass,$methodName[1]), array($this->getRequest()));
+        if(is_subclass_of($methodName[0], 'Controller')){
+            $controllerClass = new $methodName[0]();
+            echo call_user_func_array(array($controllerClass,$methodName[1]), array($this->getRequest()));
+        }
+        echo trigger_error("Error: function class must extend controller.");
     }
 
     function __destruct(){
